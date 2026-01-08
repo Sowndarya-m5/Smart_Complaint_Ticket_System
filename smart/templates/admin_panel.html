@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>Support Team Panel</h2>
+
+    <form method="post">
+        <input type="text" name="ticket" placeholder="Ticket ID" required>
+        <select name="status">
+            <option>OPEN</option>
+            <option>PROCESSING</option>
+            <option>SOLVED</option>
+        </select>
+        <button class="btn danger">Update Status</button>
+    </form>
+    <a href="/" class="link">← Back to Home</a>
+</div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

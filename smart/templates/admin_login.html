@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Team Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>Support Team Login</h2>
+<form method="post">
+        <input type="text" name="name" placeholder="admin Name" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button class="btn primary">Login</button>
+    </form>
+
+
+    <a href="/" class="link">← Back to Home</a>
+</div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

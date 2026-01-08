@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service & Complaints</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">MSG Tech<span> Company</span></div>
+    <ul>
+        <li><a href="/complaint">Complaint</a></li>
+        <li><a href="/status">Status</a></li>
+        <li><a href="/manager">Manager</a></li>
+        <li><a href="/admin_login" class="danger">Support Team</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-left">
+        <br>
+        <br>
+        <br>
+        <h1>Service & Complaints</h1>
+        <p>Smart digital platform to manage <span id="nameslideshow"></span> efficiently.</p>
+        <a href="/complaint" class="btn primary">Raise Complaint</a>
+        <a href="/status" class="btn secondary">Check Status</a>
+    </div>
+
+    <div class="hero-right">
+        <img src="{{ url_for('static', filename='images/homes.jpg') }}">
+    </div>
+
+</section>
+
+<!-- Floating Button -->
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<!-- Chat Box -->
+<div class="chat-box" id="chatBox">
+    <div class="chat-header">Chat Support</div>
+
+    <div class="chat-body" id="chatBody"></div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

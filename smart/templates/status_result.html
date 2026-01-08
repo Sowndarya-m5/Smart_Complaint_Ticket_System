@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complaint Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>📌 Complaint Status</h2>
+
+    {% if data %}
+        <div class="status-box">
+            <p><b>Name:</b> {{ data[0] }}</p>
+            <p><b>Ticket ID:</b> {{ data[1] }}</p>
+            <p><b>Problem:</b> {{ data[2] }}</p>
+            <p><b>Complaint Date:</b> {{ data[3] }}</p>
+            <p><b>Status:</b> {{ data[4] }}</p>
+        </div>
+    {% else %}
+        <p class="error">❌ No complaint found. Please check your Name and Ticket ID.</p>
+    {% endif %}
+
+    <a href="/status" class="btn secondary">Check Another Ticket</a>
+    <a href="/" class="link">← Back to Home</a>
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

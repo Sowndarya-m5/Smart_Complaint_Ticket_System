@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Manager Dashboard</h2>
+
+    <input type="text" id="searchInput" placeholder="Search by name, ticket, status..." style="padding:10px;width:300px;margin-bottom:15px;"
+       onkeyup="searchTable()">
+
+
+    <table id="complaintTable">
+        <tr>
+            <th>Employee</th>
+            <th>Ticket</th>
+            <th>Problem</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Complaint Date</th>
+            <th>Resolve Date</th>
+        </tr>
+
+        {% for r in data %}
+        <tr>
+            <td>{{r[1]}}</td>
+            <td>{{r[5]}}</td>
+            <td>{{r[4]}}</td>
+            <td>{{r[3]}}</td>
+            <td>{{r[6]}}</td>
+            <td>{{r[7]}}</td>
+            <td>{{r[8]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/" class="link">← Home</a>
+
+    <a href="/" class="link">← Back to Home</a>
+</div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
+
+
+
+
